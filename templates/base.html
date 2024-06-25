@@ -1,0 +1,61 @@
+{% url 'home' as home_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Savings</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body class="d-flex flex-colum h-100 main-bg">
+    <!-- NavBar -->
+     <div class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+            <a href="{% url 'home' %}" class="navbar-brand"><span class="brand">YOUR</span><span class="text-primary">SAVINGS</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navlink ">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navlink ">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+
+
+
+
+    <!-- Font Awsome -->
+    <script
+      src="https://kit.fontawesome.com/3cc57474ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
